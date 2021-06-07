@@ -39,15 +39,6 @@ async function run() {
     }
 
     let assignee = Helpers.getWeightedRandomDiagnoser(availableDiagnosers);
-
-    console.log({
-      issue,
-      config,
-      requiredCapabilities,
-      availableDiagnosers,
-      assignee,
-    });
-
     if (config.comment_instead_of_assigning) {
       await GithubApi.leaveComment(client, repo, issue, assignee.username);
     } else {
