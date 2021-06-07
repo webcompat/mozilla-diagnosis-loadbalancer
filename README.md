@@ -17,7 +17,7 @@ jobs:
     name: Assign a Mozilla team member for diagnosis
     steps:
       - name: Assign Mozilla team member
-        uses: webcompat/mozilla-diagnosis-loadbalancer@v1
+        uses: webcompat/mozilla-diagnosis-loadbalancer@v1.0.0
 ```
 
 In addition, make sure the configuration file (see below) exists.
@@ -90,7 +90,7 @@ capabilities_filter:
     capability: virtual_reality
 
 # For debugging only: leave a comment instead of assignign issues.
-comment_instead_of_assigning: true
+comment_instead_of_assigning: false
 ```
 
 ## Development
@@ -98,6 +98,8 @@ comment_instead_of_assigning: true
 All source files are located inside `src`. Since GitHub doesn't run `npm install` for actions, we can either always check in the `node_modules` directory, or have a dedicated build script. Since checking in the `node_modules` folder is a bit dirty, this repo uses `ncc` to build all dependencies into a single JS file.
 
 After you changed sources and want to release a new version, run `npm run build`, which updates the files inside the `dist` folder. The GitHub action is set up to only look at the `dist/index.js`, so changes won't be in effect without that step.
+
+In addition, the workflow definition allows for a semver-based version lock. For that to work, the version needs to be tagged and released via GitHub's Release feature.
 
 ## License
 
