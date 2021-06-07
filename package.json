@@ -1,6 +1,6 @@
 {
   "name": "diagnosis-loadbalancer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A GitHub action assigning web-bugs in needsdiagnosis fairly accross Mozilla team members.",
   "main": "src/index.js",
   "repository": {

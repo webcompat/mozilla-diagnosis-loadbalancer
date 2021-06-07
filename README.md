@@ -17,7 +17,7 @@ jobs:
     name: Assign a Mozilla team member for diagnosis
     steps:
       - name: Assign Mozilla team member
-        uses: webcompat/mozilla-diagnosis-loadbalancer@v1.0.0
+        uses: webcompat/mozilla-diagnosis-loadbalancer@v1.0.1
 ```
 
 In addition, make sure the configuration file (see below) exists.
