@@ -1,0 +1,21 @@
+{
+  "name": "diagnosis-loadbalancer",
+  "version": "1.0.0",
+  "description": "A GitHub action assigning web-bugs in needsdiagnosis fairly accross Mozilla team members.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webcompat/mozilla-diagnosis-loadbalancer.git"
+  },
+  "scripts": {
+    "build": "npx ncc build src/index.js --license licenses.txt"
+  },
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@actions/github": "^5.0.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.6"
+  }
+}

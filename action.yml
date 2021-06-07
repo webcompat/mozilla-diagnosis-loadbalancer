@@ -1,0 +1,10 @@
+name: "Mozilla Diagnosis Load-Balancer"
+description: "A GitHub action assigning web-bugs in needsdiagnosis fairly accross Mozilla team members."
+inputs:
+  repo-token:
+    description: "This repo's token"
+    default: ${{ github.token }}
+    required: false
+runs:
+  using: "node12"
+  main: "dist/index.js"
